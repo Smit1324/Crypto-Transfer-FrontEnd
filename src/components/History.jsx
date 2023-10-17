@@ -26,7 +26,7 @@ const History = () => {
                   [...transactions].reverse().map((transaction, index) => {
                     return (
 
-                      <div className='w-11/12 h-40 md:h-44 flex items-end justify-between transition ease-in-out delay-50 duration-100 border-4 border-white rounded-xl rounder-xl hover:bg-white hover:text-black' key={index}>
+                      <div className='w-11/12 h-28 md:h-44 flex items-end justify-between transition ease-in-out delay-50 duration-100 border-4 border-white rounded-xl rounder-xl hover:bg-white hover:text-black' key={index}>
 
                         <div className='flex flex-col items-start justify-center space-y-3 md:ms-5 ms-3 md:mb-2 mb-1'>
 
@@ -39,8 +39,8 @@ const History = () => {
                           </div>
                           <div className='flex flex-col items-start justify-center space-y-1'>
                             <p className='text-sm md:text-base'>{transaction.amount} ETH</p>
-                            <p className='text-xs md:text-sm'>Keyword : {transaction.keyword}</p>
-                            <p className='text-xs md:text-sm'>Message : {transaction.message}</p>
+                            <p className='text-xs md:block hidden'>Keyword : {transaction.keyword}</p>
+                            <p className='text-xs md:block hidden'>Message : {transaction.message}</p>
                             <p className='text-xs'>{transaction.time}</p>
                           </div>
 
