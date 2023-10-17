@@ -23,29 +23,29 @@ const Hero = () => {
     }
 
     return (
-        <div className='w-full flex items-center justify-center mt-20'>
+        <div className='w-full flex items-center justify-center md:mt-20 mt-10'>
 
-            <div className='w-11/12 flex items-start justify-between'>
+            <div className='w-11/12 flex md:flex-row flex-col md:items-start items-center md:justify-between justify-center'>
 
-                <div className='w-1/2 flex flex-col items-start justify-start'>
+                <div className='md:w-1/2 flex flex-col md:items-start items-center md:justify-start justify-center relative'>
 
-                    <div className='w-72 h-72 absolute top-52 left-40 rounded-full -z-50 eff2'></div>
+                    <div className='w-72 h-72 absolute md:top-32 md:left-40 top-72 rounded-full -z-50 eff2'></div>
 
-                    <p className='text-4xl font-medium tracking-wide'>
+                    <p className='md:text-4xl text-3xl font-medium tracking-wide text-center md:text-left'>
                         Send Cryptos WorldWide with no restrictions & Transaction fees as small as your pen*s
                     </p>
 
                     <div className='grid grid-cols-3 mt-10'>
-                        <div className='border rounded-tl-xl w-44 h-16 flex items-center justify-center'>Decentralised</div>
-                        <div className='border w-44 h-16 flex items-center justify-center'>Security</div>
-                        <div className='border rounded-tr-xl w-44 h-16 flex items-center justify-center'>Ethereum</div>
-                        <div className='border rounded-bl-xl w-44 h-16 flex items-center justify-center'>Web3</div>
-                        <div className='border w-44 h-16 flex items-center justify-center'>Low Fee</div>
-                        <div className='border rounded-br-xl w-44 h-16 flex items-center justify-center'>Blockchain</div>
+                        <div className='border rounded-tl-xl md:w-44 w-28 md:h-16 h-16 flex items-center justify-center md:text-base text-xs'>Decentralised</div>
+                        <div className='border md:w-44 w-28 md:h-16 h-16 flex items-center justify-center md:text-base text-xs'>Security</div>
+                        <div className='border rounded-tr-xl md:w-44 w-28 md:h-16 h-16 flex items-center justify-center md:text-base text-xs'>Ethereum</div>
+                        <div className='border rounded-bl-xl md:w-44 w-28 md:h-16 h-16 flex items-center justify-center md:text-base text-xs'>Web3</div>
+                        <div className='border md:w-44 w-28 md:h-16 h-16 flex items-center justify-center md:text-base text-xs'>Low Fee</div>
+                        <div className='border rounded-br-xl md:w-44 w-28 md:h-16 h-16 flex items-center justify-center md:text-base text-xs'>Blockchain</div>
                     </div>
 
                     < button
-                        className={account ? `h-14 w-11/12 flex items-center justify-center border-2 border-blue-700 rounded-2xl text-lg font-medium bg-blue-700 text-white cursor-default mt-10` : `h-14 w-11/12 flex items-center justify-center border-2 border-blue-700 rounded-2xl text-blue-500 text-lg font-medium hover:bg-blue-700 hover:text-white mt-10`}
+                        className={account ? `md:h-14 h-12 md:w-11/12 w-full flex items-center justify-center border-2 border-blue-700 md:rounded-2xl rounded-xl md:text-lg font-medium bg-blue-700 text-white cursor-default md:mt-10 mt-8` : `md:h-14 h-12 md:w-11/12 w-full flex items-center justify-center border-2 border-blue-700 md:bg-transparent bg-blue-700 md:rounded-2xl rounded-xl text-blue-500 md:text-lg font-medium hover:bg-blue-700 hover:text-white md:mt-10 mt-8`}
                         onClick={account ? e => e.preventDefault() : connectWallet}
                     >
                         {account ? 'Wallet Connected' : 'Connect Wallet'}
@@ -53,9 +53,9 @@ const Hero = () => {
 
                 </div>
 
-                <div className='w-1/2 flex flex-col items-center justify-center space-y-5'>
+                <div className='md:w-1/2 w-full flex flex-col items-center justify-center space-y-5 md:mt-0 mt-10'>
 
-                    <div className='w-8/12 h-44 flex flex-col items-start justify-between bg-gradient-to-br from-[#00a2ffe8] to-[#ff0099e2] rounded-xl'>
+                    <div className='md:w-8/12 w-11/12 md:h-44 h-36 flex flex-col items-start justify-between bg-gradient-to-br from-[#00a2ffe8] to-[#ff0099e2] rounded-xl'>
 
                         <div className='flex items-center justify-center my-2 ms-1'>
 
@@ -64,15 +64,15 @@ const Hero = () => {
 
                         </div>
 
-                        <p className='font-thin text-sm mb-3 ms-3'>{account ? account : "No Account"}</p>
+                        <p className='font-thin md:text-sm text-xs mb-3 ms-3'>{account ? account : "No Account"}</p>
 
                     </div>
 
-                    <form className='w-full flex flex-col items-end justify-start space-y-5'>
+                    <form className='w-full flex flex-col md:items-end items-center justify-start space-y-5'>
 
                         <input
                             type="text"
-                            className='w-10/12 h-12 rounded-lg px-3 outline-none border-2 border-white bg-transparent text-white'
+                            className='md:w-10/12 w-11/12 h-12 rounded-lg px-3 outline-none border-2 border-white bg-transparent text-white'
                             placeholder="Enter Reciever's address"
                             value={formData.addressTo}
                             onChange={e => handleChange(e, "addressTo")}
@@ -80,7 +80,7 @@ const Hero = () => {
 
                         <input
                             type="number"
-                            className='w-10/12 h-12 rounded-lg px-3 outline-none border-2 border-white bg-transparent text-white'
+                            className='md:w-10/12 w-11/12 h-12 rounded-lg px-3 outline-none border-2 border-white bg-transparent text-white'
                             placeholder="Enter amount"
                             value={formData.amount}
                             onChange={e => handleChange(e, "amount")}
@@ -88,7 +88,7 @@ const Hero = () => {
 
                         <input
                             type="text"
-                            className='w-10/12 h-12 rounded-lg px-3 outline-none border-2 border-white bg-transparent text-white'
+                            className='md:w-10/12 w-11/12 h-12 rounded-lg px-3 outline-none border-2 border-white bg-transparent text-white'
                             placeholder="Enter Keyword"
                             value={formData.keyword}
                             onChange={e => handleChange(e, "keyword")}
@@ -96,14 +96,14 @@ const Hero = () => {
 
                         <input
                             type="text"
-                            className='w-10/12 h-12 rounded-lg px-3 outline-none border-2 border-white bg-transparent text-white'
+                            className='md:w-10/12 w-11/12 h-12 rounded-lg px-3 outline-none border-2 border-white bg-transparent text-white'
                             placeholder="Write your message"
                             value={formData.message}
                             onChange={e => handleChange(e, "message")}
                         />
 
                         <button
-                            className={account ? loading ? `h-12 w-10/12 flex items-center justify-center border-2 border-blue-700 rounded-xl bg-blue-700 mt-9 cursor-not-allowed` : `h-12 w-10/12 flex items-center justify-center border-2 border-blue-700 rounded-xl text-blue-500 text-lg font-medium hover:bg-blue-700 hover:text-white mt-9` : `h-14 w-10/12 flex items-center justify-center border-2 border-gray-600 rounded-xl text-lg font-medium text-gray-600 mt-9 cursor-not-allowed`}
+                            className={account ? loading ? `h-12 md:w-10/12 w-11/12 flex items-center justify-center border-2 border-blue-700 rounded-xl bg-blue-700 mt-9 cursor-not-allowed` : `h-12 md:w-10/12 w-11/12 flex items-center justify-center border-2 border-blue-700 rounded-xl md:text-blue-500 text-white md:bg-transparent bg-blue-700 text-lg font-medium hover:bg-blue-700 hover:text-white mt-9` : `h-14 md:w-10/12 w-11/12 flex items-center justify-center border-2 border-gray-600 rounded-xl text-lg font-medium text-gray-600 mt-9 cursor-not-allowed`}
                             onClick={account ? loading ? e => e.preventDefault() : handleSubmit : e => e.preventDefault()}
                         >
                             {
