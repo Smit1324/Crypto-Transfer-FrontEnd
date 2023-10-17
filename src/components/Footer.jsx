@@ -30,7 +30,7 @@ const Footer = () => {
                 </div>
 
                 <div>
-                    <p className='md:text-sm text-xs font-thin text-center'>CryptoTransfer © 2023 | All Rights Reserved</p>
+                    <p className='md:text-sm text-xs font-thin text-center md:mb-0 mb-5'>CryptoTransfer © 2023 | All Rights Reserved</p>
                 </div>
 
             </div>

@@ -20,7 +20,7 @@ const Navbar = () => {
 
       <div className='flex md:flex-row flex-col items-center justify-center md:ms-10'>
         <img src={MetaMask} alt="Add" className='w-12 h-12' />
-        <p className='font-medium md:hidden text-white'>{account !== "" ? account.slice(0, 5) + '...' + account.slice(-1) : 'NO WALLET CONNECTED'}</p>
+        <p className='font-medium text-xs md:hidden text-white'>{account !== "" ? account.slice(0, 5) + '...' + account.slice(-1) : 'NO WALLET CONNECTED'}</p>
         <p className='font-medium md:block ms-5 hidden text-white'>{account !== "" ? account : 'NO WALLET CONNECTED'}</p>
       </div>
 
