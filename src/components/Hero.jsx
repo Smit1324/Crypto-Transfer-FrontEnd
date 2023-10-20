@@ -64,7 +64,8 @@ const Hero = () => {
 
                         </div>
 
-                        <p className='font-thin md:text-sm text-xs mb-3 ms-3'>{account ? account : "No Account"}</p>
+                        <p className='font-thin md:text-sm text-xs mb-3 ms-3 md:block hidden'>{account ? account : "No Account"}</p>
+                        <p className='font-thin md:text-sm text-xs mb-3 ms-3 block md:hidden'>{account ? account.slice(0, 5) + '.......' + account.slice(-1) : "No Account"}</p>
 
                     </div>
 

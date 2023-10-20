@@ -28,7 +28,7 @@ const History = () => {
 
                       <div className='w-11/12 h-28 md:h-44 flex items-end justify-between transition ease-in-out delay-50 duration-100 border-4 border-white rounded-xl rounder-xl hover:bg-white hover:text-black' key={index}>
 
-                        <div className='flex flex-col items-start justify-center space-y-3 md:ms-5 ms-3 md:mb-2 mb-1'>
+                        <div className='flex flex-col items-start justify-center md:space-y-3 space-y-1 md:ms-5 ms-3 md:mb-2 mb-1'>
 
                           <div className='flex flex-col items-start justify-center'>
                             <p className='font-medium md:block hidden'>From : {transaction.from}</p>
