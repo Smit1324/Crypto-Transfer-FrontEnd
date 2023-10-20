@@ -32,7 +32,7 @@ const Hero = () => {
                     <div className='w-72 h-72 absolute md:top-32 md:left-40 top-72 rounded-full -z-50 eff2'></div>
 
                     <p className='md:text-4xl text-3xl font-medium tracking-wide text-center md:text-left'>
-                        Send Cryptos WorldWide with no restrictions & Transaction fees as small as your pen*s
+                        Send Cryptos WorldWide with no restrictions & Transaction fees as low as a penny
                     </p>
 
                     <div className='grid grid-cols-3 mt-10'>
